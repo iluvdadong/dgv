@@ -19,6 +19,7 @@
 		2957398B275B6E33006F0157 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2957398A275B6E32006F0157 /* Movie.swift */; };
 		2957398E275B82B2006F0157 /* SCDream3.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2957398D275B82B2006F0157 /* SCDream3.otf */; };
 		29573990275B82BE006F0157 /* SCDream5.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2957398F275B82BE006F0157 /* SCDream5.otf */; };
+		29969F14275CAAA00020E172 /* MovieListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29969F13275CAAA00020E172 /* MovieListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		2957398A275B6E32006F0157 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		2957398D275B82B2006F0157 /* SCDream3.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SCDream3.otf; sourceTree = "<group>"; };
 		2957398F275B82BE006F0157 /* SCDream5.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SCDream5.otf; sourceTree = "<group>"; };
+		29969F13275CAAA00020E172 /* MovieListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				2957395B2758A9A8006F0157 /* MovieListViewController.swift */,
+				29969F13275CAAA00020E172 /* MovieListCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29969F14275CAAA00020E172 /* MovieListCell.swift in Sources */,
 				2957395C2758A9A8006F0157 /* MovieListViewController.swift in Sources */,
 				295739582758A9A8006F0157 /* AppDelegate.swift in Sources */,
 				2957398B275B6E33006F0157 /* Movie.swift in Sources */,
