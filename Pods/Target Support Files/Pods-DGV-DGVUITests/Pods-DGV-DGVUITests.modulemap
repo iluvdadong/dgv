@@ -1,0 +1,6 @@
+framework module Pods_DGV_DGVUITests {
+  umbrella header "Pods-DGV-DGVUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

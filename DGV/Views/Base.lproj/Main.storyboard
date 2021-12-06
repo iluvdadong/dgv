@@ -105,7 +105,7 @@
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="호아킨 피닉스 | 에이미 아담스 | 루니 블라" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqD-Eb-mjj">
                                                                             <rect key="frame" x="19" y="0.0" width="176" height="12"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                            <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                     </subviews>
@@ -152,6 +152,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="네이버 영화 검색" id="y9l-nm-vNz"/>
                     <connections>
+                        <outlet property="searchBar" destination="qa7-OV-TKl" id="Vi4-gQ-Vyf"/>
                         <outlet property="tableView" destination="DiD-Wt-SR8" id="Ynp-SA-mNV"/>
                     </connections>
                 </viewController>

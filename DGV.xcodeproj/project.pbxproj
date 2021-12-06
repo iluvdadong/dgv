@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07D1854552F9B99562C94864 /* Pods_DGVTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 572C70D0FD33A1C91E0BA26D /* Pods_DGVTests.framework */; };
+		290F4A35275DF18A00980270 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290F4A34275DF18A00980270 /* Constants.swift */; };
 		295739582758A9A8006F0157 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295739572758A9A8006F0157 /* AppDelegate.swift */; };
 		2957395A2758A9A8006F0157 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295739592758A9A8006F0157 /* SceneDelegate.swift */; };
 		2957395C2758A9A8006F0157 /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2957395B2758A9A8006F0157 /* MovieListViewController.swift */; };
@@ -20,6 +22,8 @@
 		2957398E275B82B2006F0157 /* SCDream3.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2957398D275B82B2006F0157 /* SCDream3.otf */; };
 		29573990275B82BE006F0157 /* SCDream5.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2957398F275B82BE006F0157 /* SCDream5.otf */; };
 		29969F14275CAAA00020E172 /* MovieListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29969F13275CAAA00020E172 /* MovieListCell.swift */; };
+		76B2094B2E86F2A79B74A33D /* Pods_DGV_DGVUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9357C213363906E1BCB7582B /* Pods_DGV_DGVUITests.framework */; };
+		C61DB30AE355EAF31CEF3D16 /* Pods_DGV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 603B92E68D28F24F109362A9 /* Pods_DGV.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0766DB2898AF730D14E1AF58 /* Pods-DGVTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DGVTests.release.xcconfig"; path = "Target Support Files/Pods-DGVTests/Pods-DGVTests.release.xcconfig"; sourceTree = "<group>"; };
+		2190D49059AEBF80C0F67207 /* Pods-DGV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DGV.debug.xcconfig"; path = "Target Support Files/Pods-DGV/Pods-DGV.debug.xcconfig"; sourceTree = "<group>"; };
+		290F4A34275DF18A00980270 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		295739542758A9A8006F0157 /* DGV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DGV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		295739572758A9A8006F0157 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		295739592758A9A8006F0157 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +64,13 @@
 		2957398D275B82B2006F0157 /* SCDream3.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SCDream3.otf; sourceTree = "<group>"; };
 		2957398F275B82BE006F0157 /* SCDream5.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SCDream5.otf; sourceTree = "<group>"; };
 		29969F13275CAAA00020E172 /* MovieListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListCell.swift; sourceTree = "<group>"; };
+		572C70D0FD33A1C91E0BA26D /* Pods_DGVTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DGVTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		603B92E68D28F24F109362A9 /* Pods_DGV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DGV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9357C213363906E1BCB7582B /* Pods_DGV_DGVUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DGV_DGVUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2E60ED3BC0111428E3EAF77 /* Pods-DGVTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DGVTests.debug.xcconfig"; path = "Target Support Files/Pods-DGVTests/Pods-DGVTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B51FE7F4BE359B56BEA0FFB8 /* Pods-DGV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DGV.release.xcconfig"; path = "Target Support Files/Pods-DGV/Pods-DGV.release.xcconfig"; sourceTree = "<group>"; };
+		CC90CF411939765A2FD714ED /* Pods-DGV-DGVUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DGV-DGVUITests.debug.xcconfig"; path = "Target Support Files/Pods-DGV-DGVUITests/Pods-DGV-DGVUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		DA0BAD7B335F755635319EE7 /* Pods-DGV-DGVUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DGV-DGVUITests.release.xcconfig"; path = "Target Support Files/Pods-DGV-DGVUITests/Pods-DGV-DGVUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C61DB30AE355EAF31CEF3D16 /* Pods_DGV.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07D1854552F9B99562C94864 /* Pods_DGVTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,12 +94,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76B2094B2E86F2A79B74A33D /* Pods_DGV_DGVUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		290F4A33275DF17500980270 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				290F4A34275DF18A00980270 /* Constants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		2957394B2758A9A7006F0157 = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +116,8 @@
 				2957396D2758A9AB006F0157 /* DGVTests */,
 				295739772758A9AB006F0157 /* DGVUITests */,
 				295739552758A9A8006F0157 /* Products */,
+				CDE5BE0C08403DE514863F47 /* Pods */,
+				B578E3868778512350DFF150 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,6 +134,7 @@
 		295739562758A9A8006F0157 /* DGV */ = {
 			isa = PBXGroup;
 			children = (
+				290F4A33275DF17500980270 /* Utils */,
 				2957398C275B8254006F0157 /* Font */,
 				29573989275B6D43006F0157 /* Views */,
 				29573988275B6D38006F0157 /* Controllers */,
@@ -171,6 +199,29 @@
 			path = Font;
 			sourceTree = "<group>";
 		};
+		B578E3868778512350DFF150 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				603B92E68D28F24F109362A9 /* Pods_DGV.framework */,
+				9357C213363906E1BCB7582B /* Pods_DGV_DGVUITests.framework */,
+				572C70D0FD33A1C91E0BA26D /* Pods_DGVTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CDE5BE0C08403DE514863F47 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2190D49059AEBF80C0F67207 /* Pods-DGV.debug.xcconfig */,
+				B51FE7F4BE359B56BEA0FFB8 /* Pods-DGV.release.xcconfig */,
+				CC90CF411939765A2FD714ED /* Pods-DGV-DGVUITests.debug.xcconfig */,
+				DA0BAD7B335F755635319EE7 /* Pods-DGV-DGVUITests.release.xcconfig */,
+				A2E60ED3BC0111428E3EAF77 /* Pods-DGVTests.debug.xcconfig */,
+				0766DB2898AF730D14E1AF58 /* Pods-DGVTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -178,9 +229,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2957397E2758A9AB006F0157 /* Build configuration list for PBXNativeTarget "DGV" */;
 			buildPhases = (
+				51E1047A20FEE07893839189 /* [CP] Check Pods Manifest.lock */,
 				295739502758A9A8006F0157 /* Sources */,
 				295739512758A9A8006F0157 /* Frameworks */,
 				295739522758A9A8006F0157 /* Resources */,
+				9B8B9660BCC6F38E3EDBD154 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -195,6 +248,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 295739812758A9AB006F0157 /* Build configuration list for PBXNativeTarget "DGVTests" */;
 			buildPhases = (
+				4BA9B8C7EA9A37C00682FB30 /* [CP] Check Pods Manifest.lock */,
 				295739662758A9AB006F0157 /* Sources */,
 				295739672758A9AB006F0157 /* Frameworks */,
 				295739682758A9AB006F0157 /* Resources */,
@@ -213,9 +267,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 295739842758A9AB006F0157 /* Build configuration list for PBXNativeTarget "DGVUITests" */;
 			buildPhases = (
+				4CC2805D7482CC28B209C320 /* [CP] Check Pods Manifest.lock */,
 				295739702758A9AB006F0157 /* Sources */,
 				295739712758A9AB006F0157 /* Frameworks */,
 				295739722758A9AB006F0157 /* Resources */,
+				94028725F4B493442EA7E5E5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -299,6 +355,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4BA9B8C7EA9A37C00682FB30 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DGVTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4CC2805D7482CC28B209C320 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DGV-DGVUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		51E1047A20FEE07893839189 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DGV-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		94028725F4B493442EA7E5E5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DGV-DGVUITests/Pods-DGV-DGVUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DGV-DGVUITests/Pods-DGV-DGVUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DGV-DGVUITests/Pods-DGV-DGVUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B8B9660BCC6F38E3EDBD154 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DGV/Pods-DGV-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DGV/Pods-DGV-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DGV/Pods-DGV-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		295739502758A9A8006F0157 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -309,6 +468,7 @@
 				295739582758A9A8006F0157 /* AppDelegate.swift in Sources */,
 				2957398B275B6E33006F0157 /* Movie.swift in Sources */,
 				2957395A2758A9A8006F0157 /* SceneDelegate.swift in Sources */,
+				290F4A35275DF18A00980270 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,6 +642,7 @@
 		};
 		2957397F2758A9AB006F0157 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2190D49059AEBF80C0F67207 /* Pods-DGV.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -510,6 +671,7 @@
 		};
 		295739802758A9AB006F0157 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B51FE7F4BE359B56BEA0FFB8 /* Pods-DGV.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -538,6 +700,7 @@
 		};
 		295739822758A9AB006F0157 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2E60ED3BC0111428E3EAF77 /* Pods-DGVTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -563,6 +726,7 @@
 		};
 		295739832758A9AB006F0157 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0766DB2898AF730D14E1AF58 /* Pods-DGVTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -588,6 +752,7 @@
 		};
 		295739852758A9AB006F0157 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC90CF411939765A2FD714ED /* Pods-DGV-DGVUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -611,6 +776,7 @@
 		};
 		295739862758A9AB006F0157 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA0BAD7B335F755635319EE7 /* Pods-DGV-DGVUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
