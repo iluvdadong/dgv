@@ -31,15 +31,13 @@ class MovieListViewController: UIViewController {
 //        let queryParam = ["query": searchKeyword]
         let queryParam = ["query": "듄"]
 
-        let headers: HTTPHeaders = [
-            "Accept": "application/json",
-            "X-Naver-Client-Id": API.CLIENT_ID,
-            "X-Naver-Client-Secret": API.CLIENT_SECRET
-        ]
-        
-        AF.request(url, method: .get, parameters: queryParam, headers: headers).response { response in
-            debugPrint(response)
-        }
+        MyAlamofireManager
+            .shared
+            .session
+            .request(url)
+            .responseJSON(completionHandler: { response in
+                debugPrint(response)
+            })
     }
 }
 

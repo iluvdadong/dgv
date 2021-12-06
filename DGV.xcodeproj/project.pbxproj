@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		07D1854552F9B99562C94864 /* Pods_DGVTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 572C70D0FD33A1C91E0BA26D /* Pods_DGVTests.framework */; };
 		290F4A35275DF18A00980270 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290F4A34275DF18A00980270 /* Constants.swift */; };
+		290F4A39275E0D3C00980270 /* MyAlamofireManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290F4A38275E0D3C00980270 /* MyAlamofireManager.swift */; };
+		290F4A3B275E0E2800980270 /* BaseInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290F4A3A275E0E2800980270 /* BaseInterceptor.swift */; };
+		290F4A3D275E190B00980270 /* MyLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290F4A3C275E190B00980270 /* MyLogger.swift */; };
+		290F4A3F275E1A4000980270 /* MyApiStatusLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290F4A3E275E1A4000980270 /* MyApiStatusLogger.swift */; };
 		295739582758A9A8006F0157 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295739572758A9A8006F0157 /* AppDelegate.swift */; };
 		2957395A2758A9A8006F0157 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295739592758A9A8006F0157 /* SceneDelegate.swift */; };
 		2957395C2758A9A8006F0157 /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2957395B2758A9A8006F0157 /* MovieListViewController.swift */; };
@@ -47,6 +51,10 @@
 		0766DB2898AF730D14E1AF58 /* Pods-DGVTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DGVTests.release.xcconfig"; path = "Target Support Files/Pods-DGVTests/Pods-DGVTests.release.xcconfig"; sourceTree = "<group>"; };
 		2190D49059AEBF80C0F67207 /* Pods-DGV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DGV.debug.xcconfig"; path = "Target Support Files/Pods-DGV/Pods-DGV.debug.xcconfig"; sourceTree = "<group>"; };
 		290F4A34275DF18A00980270 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		290F4A38275E0D3C00980270 /* MyAlamofireManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAlamofireManager.swift; sourceTree = "<group>"; };
+		290F4A3A275E0E2800980270 /* BaseInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInterceptor.swift; sourceTree = "<group>"; };
+		290F4A3C275E190B00980270 /* MyLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLogger.swift; sourceTree = "<group>"; };
+		290F4A3E275E1A4000980270 /* MyApiStatusLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyApiStatusLogger.swift; sourceTree = "<group>"; };
 		295739542758A9A8006F0157 /* DGV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DGV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		295739572758A9A8006F0157 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		295739592758A9A8006F0157 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +117,17 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		290F4A36275E07BD00980270 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				290F4A38275E0D3C00980270 /* MyAlamofireManager.swift */,
+				290F4A3A275E0E2800980270 /* BaseInterceptor.swift */,
+				290F4A3C275E190B00980270 /* MyLogger.swift */,
+				290F4A3E275E1A4000980270 /* MyApiStatusLogger.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		2957394B2758A9A7006F0157 = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +153,7 @@
 		295739562758A9A8006F0157 /* DGV */ = {
 			isa = PBXGroup;
 			children = (
+				290F4A36275E07BD00980270 /* API */,
 				290F4A33275DF17500980270 /* Utils */,
 				2957398C275B8254006F0157 /* Font */,
 				29573989275B6D43006F0157 /* Views */,
@@ -463,11 +483,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				290F4A3F275E1A4000980270 /* MyApiStatusLogger.swift in Sources */,
 				29969F14275CAAA00020E172 /* MovieListCell.swift in Sources */,
 				2957395C2758A9A8006F0157 /* MovieListViewController.swift in Sources */,
 				295739582758A9A8006F0157 /* AppDelegate.swift in Sources */,
 				2957398B275B6E33006F0157 /* Movie.swift in Sources */,
 				2957395A2758A9A8006F0157 /* SceneDelegate.swift in Sources */,
+				290F4A3B275E0E2800980270 /* BaseInterceptor.swift in Sources */,
+				290F4A3D275E190B00980270 /* MyLogger.swift in Sources */,
+				290F4A39275E0D3C00980270 /* MyAlamofireManager.swift in Sources */,
 				290F4A35275DF18A00980270 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

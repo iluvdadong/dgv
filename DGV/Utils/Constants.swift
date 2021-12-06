@@ -12,5 +12,4 @@ enum API {
     
     static let CLIENT_ID : String = "7BG7wadY8B4HMVw5dlB4"
     static let CLIENT_SECRET : String = "vnPWLQXoVY"
-    
 }
