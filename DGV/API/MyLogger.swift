@@ -17,7 +17,8 @@ final class MyLogger: EventMonitor {
         debugPrint(request)
     }
     
-    func request(_ request: DataRequest, didParseResponse response: DataResponse<Data?, AFError>) {
+    func request<Value>(_ request: DataRequest, didParseResponse response: DataResponse<Value, AFError>) {
         print("MyLogger - request.didParseResponse")
+        debugPrint(request)
     }
 }

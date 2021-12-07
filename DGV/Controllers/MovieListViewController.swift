@@ -21,20 +21,37 @@ class MovieListViewController: UIViewController {
         tableView.delegate = self
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // 인증 실패 notification 등록
+        NotificationCenter.default.addObserver(self, selector: #selector(showErrorPopUp(notification:)), name: NSNotification.Name(rawValue: NOTIFICATION.API.AUTH_FAIL), object: nil)
+        // 에러 팝업
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        // 인증 실패 notification 등록 해제
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: NOTIFICATION.API.AUTH_FAIL), object: nil)
+    }
+    
+    @objc func showErrorPopUp(notification: NSNotification) {
+        print("MovieListViewController - showErrorPopUp()")
+        
+        if let data = notification.userInfo?["statusCode"] {
+            print("showErrorPopUp data : \(data)")
+        }
+    }
+    
     // MARK: - Naver Movie Search API
     func searchMovies() {
-        
-        let url = API.BASE_URL + "v1/search/movie.json"
-        
+                
         guard let searchKeyword = self.searchBar.text else { return }
-        
-//        let queryParam = ["query": searchKeyword]
-        let queryParam = ["query": "듄"]
 
         MyAlamofireManager
             .shared
             .session
-            .request(url)
+            .request(MySearchRouter.searchMovies(term: "듄"))
+            .validate(statusCode: 200..<401)
             .responseJSON(completionHandler: { response in
                 debugPrint(response)
             })
