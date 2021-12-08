@@ -160,8 +160,9 @@ extension MovieListViewController: UITableViewDelegate {
                     vc?.selectedTitle = movies[index].title?.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
                     vc?.selectedRating = movies[index].userRating
                     vc?.selectedDirector = movies[index].director
-                    vc?.selectActor = movies[index].actor
-                    vc?.selectPosterImg = movies[index].image
+                    vc?.selectedActor = movies[index].actor
+                    vc?.selectedPosterImg = movies[index].image
+                    vc?.selectedLink = movies[index].link
                 }
             }
         }

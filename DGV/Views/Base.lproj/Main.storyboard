@@ -279,7 +279,7 @@
                     <connections>
                         <outlet property="actorLabel" destination="1Re-vQ-eAg" id="w5q-mS-WbH"/>
                         <outlet property="directorLabel" destination="CIf-Vv-oxC" id="FSp-zB-ac6"/>
-                        <outlet property="movieWebView" destination="SQG-Iv-UQK" id="WTy-Sq-tVL"/>
+                        <outlet property="movieWebView" destination="SQG-Iv-UQK" id="d06-Gv-8qO"/>
                         <outlet property="posterImg" destination="uEE-pc-ILv" id="gDz-Mg-cg7"/>
                         <outlet property="ratingLabel" destination="rq1-Dd-xMT" id="CHE-10-apl"/>
                         <outlet property="titleLabel" destination="cgx-OH-Xzb" id="smK-Uq-KF1"/>

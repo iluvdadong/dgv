@@ -6,9 +6,10 @@
 //
 
 import UIKit
+import WebKit
 
-class MovieDetailViewController: UIViewController {
-
+class MovieDetailViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var directorLabel: UILabel!
@@ -17,30 +18,43 @@ class MovieDetailViewController: UIViewController {
     
     @IBOutlet weak var titleNavigationItem: UINavigationItem!
     
+    @IBOutlet weak var movieWebView: WKWebView!
+    
     var selectedTitle: String?
     var selectedRating: String?
     var selectedDirector: String?
-    var selectActor: String?
-    var selectPosterImg: String?
+    var selectedActor: String?
+    var selectedPosterImg: String?
+    var selectedLink: String?
     
+    override func loadView() {
+        super.loadView()
+        
+        movieWebView.uiDelegate = self
+        movieWebView.navigationDelegate = self
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if let selectedTitle = selectedTitle {
-            titleNavigationItem.title = selectedTitle
+        print("selectedLink : \(selectedLink)")
+        if let title = selectedTitle {
+            titleNavigationItem.title = title
         }
+        let url = URL(string: "https://movie.naver.com/movie/bi/mi/basic.nhn?code=194153" ?? "https://movie.naver.com/")
+              let request = URLRequest(url: url!)
+
+        movieWebView.load(request)
         
         updateUI()
-        // Do any additional setup after loading the view.
+        
     }
     
     func updateUI() {
         titleLabel.text = selectedTitle
         ratingLabel.text = selectedRating
         directorLabel.text = selectedDirector
-        actorLabel.text = selectActor
+        actorLabel.text = selectedActor
         
     }
-
+    
 }
