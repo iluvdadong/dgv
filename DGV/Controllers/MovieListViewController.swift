@@ -7,6 +7,8 @@
 
 import UIKit
 import Alamofire
+import RxSwift
+import RxCocoa
 
 class MovieListViewController: UIViewController {
     
@@ -18,11 +20,22 @@ class MovieListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        searchBar.text = "듄"
+        searchBar.text = ""
         
         // 검색 시작
-        searchMovies()
-       
+        //        searchMovies()
+        
+        searchBar
+            .rx.text // RxCocoa의 Observable 속성
+            .orEmpty // 옵셔널이 아니도록 만듭니다.
+            .debounce(.milliseconds(200), scheduler: MainScheduler.instance) // Wait 0.5 for changes.
+            .distinctUntilChanged() // 새로운 값이 이전의 값과 같은지 확인합니다.
+            .filter { !$0.isEmpty } // 새로운 값이 정말 새롭다면, 비어있지 않은 쿼리를 위해 필터링합니다.
+            .subscribe(onNext: { [unowned self] query in
+                searchMovies(query: query)
+            })
+            .disposed(by: disposeBag)
+        
         tableView.dataSource = self
         tableView.delegate = self
     }
@@ -49,15 +62,17 @@ class MovieListViewController: UIViewController {
     }
     
     // MARK: - Naver Movie Search API
-    func searchMovies() {
+    func searchMovies(query: String) {
         
         // searchKeyword가 없으면 return
         guard let searchKeyword = self.searchBar.text else { return }
+        //        guard let searchKeyword = self.searchBar.text else { return }
         
         MyAlamofireManager
             .shared
             .session
-            .request(MySearchRouter.searchMovies(term: searchBar.text!))
+            .request(MySearchRouter.searchMovies(term: query))
+        //            .request(MySearchRouter.searchMovies(term: searchBar.text!))
             .validate(statusCode: 200..<401)
             .responseJSON(completionHandler: { response in
                 switch response.result {
@@ -135,11 +150,12 @@ extension MovieListViewController: UITableViewDataSource {
         
         // 포스터 이미지뷰 - 비동기처리
         if let posterImg = movie.image {
-            let url = URL(string: posterImg)
-            DispatchQueue.global().async {
-                let data = try? Data(contentsOf: url!)
-                DispatchQueue.main.async {
-                    cell.posterImgView.image = UIImage(data: data!)
+            if let url = URL(string: posterImg) {
+                DispatchQueue.global().async {
+                    let data = try? Data(contentsOf: url)
+                    DispatchQueue.main.async {
+                        cell.posterImgView.image = UIImage(data: data!)
+                    }
                 }
             }
         } else {
@@ -157,18 +173,18 @@ extension MovieListViewController: UITableViewDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
-            if segue.identifier == "showDetail" {
-                let vc = segue.destination as? MovieDetailViewController
-                if let index = sender as? Int{
-                    vc?.selectedTitle = movies[index].title?.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
-                    vc?.selectedRating = movies[index].userRating
-                    vc?.selectedDirector = movies[index].director
-                    vc?.selectedActor = movies[index].actor
-                    vc?.selectedPosterImg = movies[index].image
-                    vc?.selectedLink = movies[index].link
-                    vc?.selectedImgURL = movies[index].image
-                }
+        if segue.identifier == "showDetail" {
+            let vc = segue.destination as? MovieDetailViewController
+            if let index = sender as? Int{
+                vc?.selectedTitle = movies[index].title?.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
+                vc?.selectedRating = movies[index].userRating
+                vc?.selectedDirector = movies[index].director
+                vc?.selectedActor = movies[index].actor
+                vc?.selectedPosterImg = movies[index].image
+                vc?.selectedLink = movies[index].link
+                vc?.selectedImgURL = movies[index].image
             }
         }
+    }
     
 }
