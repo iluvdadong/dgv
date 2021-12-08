@@ -23,7 +23,7 @@
 		2957396F2758A9AB006F0157 /* DGVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2957396E2758A9AB006F0157 /* DGVTests.swift */; };
 		295739792758A9AB006F0157 /* DGVUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295739782758A9AB006F0157 /* DGVUITests.swift */; };
 		2957397B2758A9AB006F0157 /* DGVUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2957397A2758A9AB006F0157 /* DGVUITestsLaunchTests.swift */; };
-		2957398B275B6E33006F0157 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2957398A275B6E32006F0157 /* Movie.swift */; };
+		2957398B275B6E33006F0157 /* MovieSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2957398A275B6E32006F0157 /* MovieSearchResult.swift */; };
 		2957398E275B82B2006F0157 /* SCDream3.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2957398D275B82B2006F0157 /* SCDream3.otf */; };
 		29573990275B82BE006F0157 /* SCDream5.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2957398F275B82BE006F0157 /* SCDream5.otf */; };
 		29969F14275CAAA00020E172 /* MovieListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29969F13275CAAA00020E172 /* MovieListCell.swift */; };
@@ -70,7 +70,7 @@
 		295739742758A9AB006F0157 /* DGVUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DGVUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		295739782758A9AB006F0157 /* DGVUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGVUITests.swift; sourceTree = "<group>"; };
 		2957397A2758A9AB006F0157 /* DGVUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGVUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		2957398A275B6E32006F0157 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		2957398A275B6E32006F0157 /* MovieSearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSearchResult.swift; sourceTree = "<group>"; };
 		2957398D275B82B2006F0157 /* SCDream3.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SCDream3.otf; sourceTree = "<group>"; };
 		2957398F275B82BE006F0157 /* SCDream5.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SCDream5.otf; sourceTree = "<group>"; };
 		29969F13275CAAA00020E172 /* MovieListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListCell.swift; sourceTree = "<group>"; };
@@ -190,7 +190,7 @@
 		29573987275B6D2F006F0157 /* Data Model */ = {
 			isa = PBXGroup;
 			children = (
-				2957398A275B6E32006F0157 /* Movie.swift */,
+				2957398A275B6E32006F0157 /* MovieSearchResult.swift */,
 			);
 			path = "Data Model";
 			sourceTree = "<group>";
@@ -491,7 +491,7 @@
 				290F4A41275F4A7600980270 /* MySearchRouter.swift in Sources */,
 				2957395C2758A9A8006F0157 /* MovieListViewController.swift in Sources */,
 				295739582758A9A8006F0157 /* AppDelegate.swift in Sources */,
-				2957398B275B6E33006F0157 /* Movie.swift in Sources */,
+				2957398B275B6E33006F0157 /* MovieSearchResult.swift in Sources */,
 				2957395A2758A9A8006F0157 /* SceneDelegate.swift in Sources */,
 				290F4A3B275E0E2800980270 /* BaseInterceptor.swift in Sources */,
 				290F4A3D275E190B00980270 /* MyLogger.swift in Sources */,

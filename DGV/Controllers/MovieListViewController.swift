@@ -13,12 +13,11 @@ class MovieListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
-    let posterImgQueue = DispatchQueue(label: "posterImg")
     var movies: [MovieSearchResult.Movie] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        searchBar.text = "라라랜드"
+        searchBar.text = "듄"
         print("seatchBar.text \(searchBar.text)")
         searchMovies()
         tableView.dataSource = self
@@ -65,12 +64,12 @@ class MovieListViewController: UIViewController {
                         //obj Any인 movieData를 JSON 타입으로 변경
                         let json = try JSONSerialization.data(withJSONObject: movieData, options: .prettyPrinted)
                         print("json:\(json)")
-                       
+                        
                         // JSON DECODE
                         let decodedJson = try JSONDecoder().decode(MovieSearchResult.self, from: json)
-
+                        
                         self.movies = decodedJson.items
-
+                        
                         for movie in self.movies {
                             print("movie.title: \(movie.title)")
                         }
@@ -90,7 +89,7 @@ class MovieListViewController: UIViewController {
 
 extension MovieListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-                return movies.count
+        return movies.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -102,31 +101,47 @@ extension MovieListViewController: UITableViewDataSource {
         }
         
         // 영화 제목 레이블
-        cell.titleLabel.text = title
+        cell.titleLabel.text = title.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
         print("===============> \(title) \(userRating) \(director)")
         // 평점 레이블
         if userRating == "0.00" {
+            cell.ratingLabel.textColor = .gray
             cell.ratingLabel.text = "평가 없음"
         } else {
+            cell.ratingLabel.textColor = UIColor.label
             cell.ratingLabel.text = userRating
         }
         
         // 감독 레이블
         if director == "" {
+            cell.directorLabel.textColor = .gray
             cell.directorLabel.text = "감독 정보 없음"
         } else {
+            cell.directorLabel.textColor = UIColor.label
             cell.directorLabel.text = director
         }
         
         // 연기자 레이블
         if actor == "" {
             cell.actorLabel.text = "연기자 정보 없음"
+            cell.actorLabel.textColor = .gray
         } else {
+            cell.actorLabel.textColor = UIColor.label
             cell.actorLabel.text = actor
         }
         
-        cell.posterImgView?.image = UIImage(named: "movie_sample")
-        
+        // 포스터 이미지뷰 - 비동기처리
+        if let posterImg = movie.image {
+            let url = URL(string: posterImg)
+            DispatchQueue.global().async {
+                let data = try? Data(contentsOf: url!)
+                DispatchQueue.main.async {
+                    cell.posterImgView.image = UIImage(data: data!)
+                }
+            }
+        } else {
+            cell.posterImgView.image = UIImage(named: "movie_sample")
+        }
         return  cell
     }
     
