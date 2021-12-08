@@ -14,12 +14,15 @@ class MovieListViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     
     var movies: [MovieSearchResult.Movie] = []
+    let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.text = "듄"
-        print("seatchBar.text \(searchBar.text)")
+        
+        // 검색 시작
         searchMovies()
+       
         tableView.dataSource = self
         tableView.delegate = self
     }
@@ -163,6 +166,7 @@ extension MovieListViewController: UITableViewDelegate {
                     vc?.selectedActor = movies[index].actor
                     vc?.selectedPosterImg = movies[index].image
                     vc?.selectedLink = movies[index].link
+                    vc?.selectedImgURL = movies[index].image
                 }
             }
         }

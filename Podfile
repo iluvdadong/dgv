@@ -7,6 +7,8 @@ target 'DGV' do
 
   # Pods for DGV
   pod 'Alamofire', '~> 5.4'  
+  pod 'RxSwift', '~> 5'
+  pod 'RxCocoa', '~> 5'
 
   target 'DGVTests' do
     inherit! :search_paths

@@ -26,6 +26,7 @@ class MovieDetailViewController: UIViewController, WKUIDelegate, WKNavigationDel
     var selectedActor: String?
     var selectedPosterImg: String?
     var selectedLink: String?
+    var selectedImgURL: String?
     
     override func loadView() {
         super.loadView()
@@ -36,11 +37,10 @@ class MovieDetailViewController: UIViewController, WKUIDelegate, WKNavigationDel
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("selectedLink : \(selectedLink)")
         if let title = selectedTitle {
             titleNavigationItem.title = title
         }
-        let url = URL(string: "https://movie.naver.com/movie/bi/mi/basic.nhn?code=194153" ?? "https://movie.naver.com/")
+        let url = URL(string: selectedLink ?? "https://movie.naver.com/")
               let request = URLRequest(url: url!)
 
         movieWebView.load(request)
@@ -54,6 +54,18 @@ class MovieDetailViewController: UIViewController, WKUIDelegate, WKNavigationDel
         ratingLabel.text = selectedRating
         directorLabel.text = selectedDirector
         actorLabel.text = selectedActor
+        
+        if let posterImg = selectedImgURL {
+            let url = URL(string: posterImg)
+            DispatchQueue.global().async {
+                let data = try? Data(contentsOf: url!)
+                DispatchQueue.main.async {
+                    self.posterImg.image = UIImage(data: data!)
+                }
+            }
+        } else {
+            self.posterImg.image = UIImage(named: "movie_sample")
+        }
         
     }
     
