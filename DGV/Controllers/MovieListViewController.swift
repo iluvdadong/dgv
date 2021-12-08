@@ -149,4 +149,21 @@ extension MovieListViewController: UITableViewDataSource {
 
 extension MovieListViewController: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showDetail", sender: indexPath.row)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+            if segue.identifier == "showDetail" {
+                let vc = segue.destination as? MovieDetailViewController
+                if let index = sender as? Int{
+                    vc?.selectedTitle = movies[index].title?.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
+                    vc?.selectedRating = movies[index].userRating
+                    vc?.selectedDirector = movies[index].director
+                    vc?.selectActor = movies[index].actor
+                    vc?.selectPosterImg = movies[index].image
+                }
+            }
+        }
+    
 }
