@@ -13,9 +13,12 @@ class MovieListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
+    let posterImgQueue = DispatchQueue(label: "posterImg")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.text = "라라랜드"
+        print("seatchBar.text \(searchBar.text)")
         searchMovies()
         tableView.dataSource = self
         tableView.delegate = self
@@ -44,16 +47,38 @@ class MovieListViewController: UIViewController {
     
     // MARK: - Naver Movie Search API
     func searchMovies() {
-                
+        
+        // searchKeyword가 없으면 return
         guard let searchKeyword = self.searchBar.text else { return }
-
+        
         MyAlamofireManager
             .shared
             .session
-            .request(MySearchRouter.searchMovies(term: "듄"))
+            .request(MySearchRouter.searchMovies(term: searchBar.text!))
             .validate(statusCode: 200..<401)
             .responseJSON(completionHandler: { response in
-                debugPrint(response)
+                switch response.result {
+                case .success(let movieData):
+                    do {
+                        print("movieData\(movieData)")
+                        //obj Any인 MovieData를 JSON 타입으로 변경
+                        let json = try JSONSerialization.data(withJSONObject: movieData, options: .prettyPrinted)
+                        print("json:\(json)")
+                       
+                        // JSON DECODE
+                        let decodedJson = try JSONDecoder().decode(MovieSearchResult.self, from: json)
+
+                        let movies: [MovieSearchResult.Movie] = decodedJson.items
+
+                        for movie in movies {
+                            print("movie.title: \(movie.title)")
+                        }
+                    } catch(let error) {
+                        print("dedcode json catch error: \(error.localizedDescription)")
+                    }
+                case .failure(let error):
+                    print("error: \(error.localizedDescription)")
+                }
             })
     }
 }

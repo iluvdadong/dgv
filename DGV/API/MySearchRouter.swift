@@ -17,6 +17,7 @@ enum MySearchRouter: URLRequestConvertible {
         return URL(string: API.BASE_URL +  "v1/search/")!
     }
     
+    // method 분기처리 - 현재 get만 사용하여 switch문 없이 곧바로 return
     var method: HTTPMethod {
         return .get
 //        switch self {

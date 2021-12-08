@@ -126,6 +126,13 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="Koy-Id-AKv" secondAttribute="trailing" id="lAP-AA-Ez5"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="actorLabel" destination="eqD-Eb-mjj" id="pIJ-yg-qs6"/>
+                                            <outlet property="directorLabel" destination="H5r-Ha-PZ6" id="okc-XB-DHu"/>
+                                            <outlet property="posterImgView" destination="WgG-tz-3T6" id="GxD-Tm-bBd"/>
+                                            <outlet property="ratingLabel" destination="KUf-5F-bZ1" id="NsR-sN-cRb"/>
+                                            <outlet property="titleLabel" destination="MdK-QB-b3t" id="2tr-xE-zdy"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
