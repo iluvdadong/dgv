@@ -28,11 +28,11 @@ class MovieListViewController: UIViewController {
         searchBar
             .rx.text // RxCocoa의 Observable 속성
             .orEmpty // 옵셔널이 아니도록 만듭니다.
-            .debounce(.milliseconds(200), scheduler: MainScheduler.instance) // Wait 0.5 for changes.
+            .debounce(.milliseconds(200), scheduler: MainScheduler.instance)
             .distinctUntilChanged() // 새로운 값이 이전의 값과 같은지 확인합니다.
             .filter { !$0.isEmpty } // 새로운 값이 정말 새롭다면, 비어있지 않은 쿼리를 위해 필터링합니다.
             .subscribe(onNext: { [unowned self] query in
-                searchMovies(query: query)
+                searchMovies(query: query) // naver movie api 호출
             })
             .disposed(by: disposeBag)
         
