@@ -9,4 +9,6 @@ Simple Movie Searching App using Naver Movie API
 ## Technology Stack
 `Swift`, `Almofire`, `RxSwift/RxCocoa`
 
+## ScreenShot
+<img src="./image/img_01.png" width="300" /> <img src="./image/img_02.png" width="300" />
 
