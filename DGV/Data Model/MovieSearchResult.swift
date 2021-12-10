@@ -9,7 +9,8 @@ import Foundation
 import UIKit
 
 struct MovieSearchResult: Codable {
-    let items: [Movie]
+    var items: [Movie]
+    
     struct Movie: Codable {
         var title: String?
         var link: String?
@@ -19,6 +20,7 @@ struct MovieSearchResult: Codable {
         var director: String?
         var actor: String?
         var userRating: String?
+        var hasLiked: Bool?
     }
     
 }

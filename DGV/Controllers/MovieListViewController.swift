@@ -20,11 +20,8 @@ class MovieListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         searchBar.text = ""
-        
-        // 검색 시작
-        //        searchMovies()
-        
         searchBar
             .rx.text // RxCocoa의 Observable 속성
             .orEmpty // 옵셔널이 아니도록 만듭니다.
@@ -61,18 +58,29 @@ class MovieListViewController: UIViewController {
         }
     }
     
+    func someMethodIWanttocall(cell: UITableViewCell){
+        let indexPathTapped = tableView.indexPath(for: cell)
+        
+        var movie = movies[(indexPathTapped?[1])!]
+        
+        if movie.hasLiked == nil {
+            movie.hasLiked = true
+        } else {
+            movie.hasLiked = !(movie.hasLiked ?? false)
+        }
+        print(movie)
+    }
+    
     // MARK: - Naver Movie Search API
     func searchMovies(query: String) {
         
         // searchKeyword가 없으면 return
-        guard let searchKeyword = self.searchBar.text else { return }
-        //        guard let searchKeyword = self.searchBar.text else { return }
+//        guard let searchKeyword = self.searchBar.text else { return }
         
         MyAlamofireManager
             .shared
             .session
             .request(MySearchRouter.searchMovies(term: query))
-        //            .request(MySearchRouter.searchMovies(term: searchBar.text!))
             .validate(statusCode: 200..<401)
             .responseJSON(completionHandler: { response in
                 switch response.result {
@@ -112,7 +120,7 @@ extension MovieListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieListCell", for: indexPath) as! MovieListCell
-        
+        cell.link = self
         let movie = movies[indexPath.row]
         guard let title = movie.title, let userRating = movie.userRating, let director = movie.director, let actor = movie.actor else {
             return cell
