@@ -20,6 +20,7 @@ class MovieListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         
         searchBar.text = ""
         searchBar
@@ -60,15 +61,20 @@ class MovieListViewController: UIViewController {
     
     func someMethodIWanttocall(cell: UITableViewCell){
         let indexPathTapped = tableView.indexPath(for: cell)
-        
-        var movie = movies[(indexPathTapped?[1])!]
-        
-        if movie.hasLiked == nil {
-            movie.hasLiked = true
-        } else {
-            movie.hasLiked = !(movie.hasLiked ?? false)
-        }
+        print(indexPathTapped![1])
+       
+        var movie = movies[indexPathTapped![1]]
         print(movie)
+        
+        let hasLiked = movie.hasLiked
+        movies[indexPathTapped![1]].hasLiked = !(hasLiked!)
+
+        print(movies[indexPathTapped![1]].hasLiked)
+        // 즐겨찾기한 배열에 append하거나 삭제하기
+        // reload해서 다시 뿌려줄때 초기화되기 때문에 셀그려줄때마다 like 배열 확인하여 해당되면 하트 그려주는 식으로..?? 구현 필요
+        
+        // reload
+       // tableView.reloadRows(at: [indexPathTapped!], with: .fade)
     }
     
     // MARK: - Naver Movie Search API
@@ -92,7 +98,8 @@ class MovieListViewController: UIViewController {
                         print("json:\(json)")
                         
                         // JSON DECODE
-                        let decodedJson = try JSONDecoder().decode(MovieSearchResult.self, from: json)
+                        var decodedJson = try JSONDecoder().decode(MovieSearchResult.self, from: json)
+                        
                         
                         self.movies = decodedJson.items
                         
@@ -122,6 +129,19 @@ extension MovieListViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieListCell", for: indexPath) as! MovieListCell
         cell.link = self
         let movie = movies[indexPath.row]
+       
+        // mmovies의 hasLiked 값 false로 초기화
+        movies[indexPath.row].hasLiked = false
+        
+        // movie의 hasLiked 상태값에 따른 cell의 버튼 이미지 변경
+        if movie.hasLiked == true {
+            cell.likeBtn.setImage(UIImage(systemName: "heart.fill"), for: .selected)
+            cell.likeBtn.tintColor = .red
+        } else {
+            cell.likeBtn.setImage(UIImage(systemName: "heart"), for: .normal)
+            cell.likeBtn.tintColor = .black
+        }
+        
         guard let title = movie.title, let userRating = movie.userRating, let director = movie.director, let actor = movie.actor else {
             return cell
         }
