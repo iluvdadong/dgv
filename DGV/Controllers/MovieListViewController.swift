@@ -16,6 +16,7 @@ class MovieListViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     
     var movies: [MovieSearchResult.Movie] = []
+    var likedMovies: [String] = []
     let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
@@ -59,22 +60,27 @@ class MovieListViewController: UIViewController {
         }
     }
     
-    func someMethodIWanttocall(cell: UITableViewCell){
-        let indexPathTapped = tableView.indexPath(for: cell)
-        print(indexPathTapped![1])
+    func didLikeButtonTouched(cell: UITableViewCell){
+      
+        guard let indexPathTapped = tableView.indexPath(for: cell) else { return }
        
-        var movie = movies[indexPathTapped![1]]
+        var movie = movies[indexPathTapped[1]]
         print(movie)
         
         let hasLiked = movie.hasLiked
-        movies[indexPathTapped![1]].hasLiked = !(hasLiked!)
+        movies[indexPathTapped[1]].hasLiked = !(hasLiked!)
 
-        print(movies[indexPathTapped![1]].hasLiked)
-        // 즐겨찾기한 배열에 append하거나 삭제하기
-        // reload해서 다시 뿌려줄때 초기화되기 때문에 셀그려줄때마다 like 배열 확인하여 해당되면 하트 그려주는 식으로..?? 구현 필요
+        print(movies[indexPathTapped[1]].hasLiked)
         
-        // reload
-       // tableView.reloadRows(at: [indexPathTapped!], with: .fade)
+        // link를 키값으로 좋아요 목록 추가
+        if hasLiked! {
+            cell.accessoryView?.tintColor = .lightGray
+            likedMovies.removeAll{ $0 == movie.link!}
+        } else {
+            cell.accessoryView?.tintColor = .systemPink
+            likedMovies.append(movie.link!)
+        }
+        print(likedMovies)
     }
     
     // MARK: - Naver Movie Search API
@@ -134,13 +140,22 @@ extension MovieListViewController: UITableViewDataSource {
         movies[indexPath.row].hasLiked = false
         
         // movie의 hasLiked 상태값에 따른 cell의 버튼 이미지 변경
-        if movie.hasLiked == true {
-            cell.likeBtn.setImage(UIImage(systemName: "heart.fill"), for: .selected)
-            cell.likeBtn.tintColor = .red
+        if likedMovies.contains(movie.link!) {
+            cell.contentView.backgroundColor = .green
+            print("############ cell.accessoryView? :\(cell.accessoryView)")
+            print("@@@@@@@@@@@!!!!!!!!!!!!!!!!!!!!")
         } else {
-            cell.likeBtn.setImage(UIImage(systemName: "heart"), for: .normal)
-            cell.likeBtn.tintColor = .black
+            print("############ cell.accessoryView? :\(cell.accessoryView)")
+            cell.contentView.backgroundColor = .lightGray
+            cell.accessoryView?.tintColor = .lightGray
         }
+        
+        print("############ likedMovies :\(likedMovies)")
+        print("############ movie.link! :\(movie.link!)")
+        print("############ likedMovies.contains(movie.link!) :\(likedMovies.contains(movie.link!))")
+
+
+
         
         guard let title = movie.title, let userRating = movie.userRating, let director = movie.director, let actor = movie.actor else {
             return cell

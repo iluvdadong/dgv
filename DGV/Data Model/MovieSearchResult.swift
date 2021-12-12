@@ -20,7 +20,7 @@ struct MovieSearchResult: Codable {
         var director: String?
         var actor: String?
         var userRating: String?
-        var hasLiked: Bool?
+        var hasLiked: Bool? = false
     }
     
 }

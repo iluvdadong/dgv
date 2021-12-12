@@ -36,15 +36,15 @@
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Sft-sz-C3e">
-                                                    <rect key="frame" x="134" y="29" width="195" height="102"/>
+                                                    <rect key="frame" x="134" y="30.999999999999993" width="195" height="98.333333333333314"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Her, 그녀" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MdK-QB-b3t">
-                                                            <rect key="frame" x="0.0" y="0.0" width="77.666666666666671" height="24"/>
-                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="67.333333333333329" height="20.333333333333332"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jl9-O9-i7f">
-                                                            <rect key="frame" x="0.0" y="29" width="64" height="40"/>
+                                                            <rect key="frame" x="0.0" y="25.333333333333336" width="56" height="40.000000000000007"/>
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="249" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="CYC-u1-Z3N">
                                                                     <rect key="frame" x="0.0" y="-0.33333333333333215" width="12" height="39.666666666666657"/>
@@ -55,17 +55,17 @@
                                                                     </constraints>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8.50" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KUf-5F-bZ1">
-                                                                    <rect key="frame" x="20" y="0.0" width="44" height="40"/>
-                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                                    <rect key="frame" x="20" y="0.0" width="36" height="40"/>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="OuK-Up-mQG">
-                                                            <rect key="frame" x="0.0" y="74" width="195" height="28"/>
+                                                            <rect key="frame" x="0.0" y="70.333333333333329" width="195" height="28"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="SYa-NL-ohJ">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="82.333333333333329" height="12"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="77.333333333333329" height="12"/>
                                                                     <subviews>
                                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="megaphone.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="YEN-KB-FJN">
                                                                             <rect key="frame" x="0.0" y="-3.5527136788005009e-15" width="12" height="12.333333333333337"/>
@@ -76,8 +76,8 @@
                                                                             </constraints>
                                                                         </imageView>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="스파이크존즈" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H5r-Ha-PZ6">
-                                                                            <rect key="frame" x="20.000000000000004" y="0.0" width="62.333333333333343" height="12"/>
-                                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                            <rect key="frame" x="20.000000000000004" y="0.0" width="57.333333333333343" height="12"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                     </subviews>
@@ -95,7 +95,7 @@
                                                                         </imageView>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="호아킨 피닉스 | 에이미 아담스 | 루니 블라" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqD-Eb-mjj">
                                                                             <rect key="frame" x="19" y="0.0" width="176" height="12"/>
-                                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
@@ -105,21 +105,10 @@
                                                         </stackView>
                                                     </subviews>
                                                 </stackView>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UOz-fW-yYq">
-                                                    <rect key="frame" x="333" y="12" width="30" height="30"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="30" id="VPR-UY-J3k"/>
-                                                        <constraint firstAttribute="width" constant="30" id="wNf-SH-VPS"/>
-                                                    </constraints>
-                                                    <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system"/>
-                                                </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="UOz-fW-yYq" secondAttribute="trailing" constant="12" id="805-a1-MiQ"/>
                                                 <constraint firstItem="Sft-sz-C3e" firstAttribute="centerY" secondItem="yYT-7O-iEC" secondAttribute="centerY" id="Dqz-rn-wDy"/>
                                                 <constraint firstItem="WgG-tz-3T6" firstAttribute="leading" secondItem="yYT-7O-iEC" secondAttribute="leading" constant="10" id="T4Q-7X-Gyi"/>
-                                                <constraint firstItem="UOz-fW-yYq" firstAttribute="top" secondItem="yYT-7O-iEC" secondAttribute="top" constant="12" id="Tju-la-Phq"/>
                                                 <constraint firstItem="WgG-tz-3T6" firstAttribute="top" secondItem="yYT-7O-iEC" secondAttribute="top" constant="10" id="b98-44-cgy"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="Sft-sz-C3e" secondAttribute="trailing" constant="30" id="bMs-ZH-L51"/>
                                                 <constraint firstAttribute="bottom" secondItem="WgG-tz-3T6" secondAttribute="bottom" constant="10" id="bnq-0Q-xqZ"/>
@@ -129,7 +118,6 @@
                                         <connections>
                                             <outlet property="actorLabel" destination="eqD-Eb-mjj" id="pIJ-yg-qs6"/>
                                             <outlet property="directorLabel" destination="H5r-Ha-PZ6" id="okc-XB-DHu"/>
-                                            <outlet property="likeBtn" destination="UOz-fW-yYq" id="XMp-Fe-KWC"/>
                                             <outlet property="posterImgView" destination="WgG-tz-3T6" id="GxD-Tm-bBd"/>
                                             <outlet property="ratingLabel" destination="KUf-5F-bZ1" id="NsR-sN-cRb"/>
                                             <outlet property="titleLabel" destination="MdK-QB-b3t" id="2tr-xE-zdy"/>
@@ -294,7 +282,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="heart" catalog="system" width="128" height="109"/>
         <image name="heart.fill" catalog="system" width="128" height="109"/>
         <image name="megaphone.fill" catalog="system" width="128" height="114"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>

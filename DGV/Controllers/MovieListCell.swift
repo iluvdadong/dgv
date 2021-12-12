@@ -20,14 +20,25 @@ class MovieListCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-        likeBtn.addTarget(self, action: #selector(handleMarkAsLike), for: .touchUpInside)
+        
+        let likeButton = UIButton(type: .system)
+        likeButton.setImage(UIImage(systemName: "heart.fill")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        likeButton.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+
+        likeButton.tintColor = .green
+        likeButton.addTarget(self, action: #selector(handleMarkAsLike), for: .touchUpInside)
+        
+        accessoryView = likeButton
+        accessoryView?.tintColor = .green
+        
+//        // Initialization code
+//        likeBtn.addTarget(self, action: #selector(handleMarkAsLike), for: .touchUpInside)
 
     }
 
     @objc private func handleMarkAsLike() {
         print("marked!!!")
-        link?.someMethodIWanttocall(cell: self)
+        link?.didLikeButtonTouched(cell: self)
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
