@@ -37,6 +37,7 @@ class MovieListViewController: UIViewController {
         
         tableView.dataSource = self
         tableView.delegate = self
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -141,6 +142,8 @@ extension MovieListViewController: UITableViewDataSource {
         
         // movie의 hasLiked 상태값에 따른 cell의 버튼 이미지 변경
         if likedMovies.contains(movie.link!) {
+            
+            cell.tintColor = .green
             cell.contentView.backgroundColor = .green
             print("############ cell.accessoryView? :\(cell.accessoryView)")
             print("@@@@@@@@@@@!!!!!!!!!!!!!!!!!!!!")

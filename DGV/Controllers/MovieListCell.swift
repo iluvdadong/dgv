@@ -14,22 +14,21 @@ class MovieListCell: UITableViewCell {
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var directorLabel: UILabel!
     @IBOutlet weak var actorLabel: UILabel!
-    @IBOutlet weak var likeBtn: UIButton!
     
     var link: MovieListViewController?
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        let likeButton = UIButton(type: .system)
-        likeButton.setImage(UIImage(systemName: "heart.fill")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        let likeButton = UIButton(type: .custom)
+        let image = UIImage(systemName: "heart.fill")?.withRenderingMode(.alwaysTemplate)
+        likeButton.setImage(image, for: .normal)
+        likeButton.tintColor = UIColor.green
         likeButton.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
 
-        likeButton.tintColor = .green
         likeButton.addTarget(self, action: #selector(handleMarkAsLike), for: .touchUpInside)
         
         accessoryView = likeButton
-        accessoryView?.tintColor = .green
         
 //        // Initialization code
 //        likeBtn.addTarget(self, action: #selector(handleMarkAsLike), for: .touchUpInside)

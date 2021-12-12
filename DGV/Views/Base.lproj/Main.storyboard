@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="139" width="375" height="673"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieListCell" rowHeight="160" id="soV-JL-S9W" customClass="MovieListCell" customModule="DGV" customModuleProvider="target">
+                                    <tableViewCell opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieListCell" rowHeight="160" id="soV-JL-S9W" customClass="MovieListCell" customModule="DGV" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.666666030883789" width="375" height="160"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="soV-JL-S9W" id="yYT-7O-iEC">
@@ -281,6 +281,7 @@
             <point key="canvasLocation" x="1756" y="66.502463054187189"/>
         </scene>
     </scenes>
+    <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <image name="heart.fill" catalog="system" width="128" height="109"/>
         <image name="megaphone.fill" catalog="system" width="128" height="114"/>
