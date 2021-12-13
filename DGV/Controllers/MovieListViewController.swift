@@ -142,22 +142,14 @@ extension MovieListViewController: UITableViewDataSource {
         
         // movie의 hasLiked 상태값에 따른 cell의 버튼 이미지 변경
         if likedMovies.contains(movie.link!) {
-            
-            cell.tintColor = .green
-            cell.contentView.backgroundColor = .green
-            print("############ cell.accessoryView? :\(cell.accessoryView)")
-            print("@@@@@@@@@@@!!!!!!!!!!!!!!!!!!!!")
+            cell.tintColor = .red
         } else {
-            print("############ cell.accessoryView? :\(cell.accessoryView)")
-            cell.contentView.backgroundColor = .lightGray
-            cell.accessoryView?.tintColor = .lightGray
+            cell.tintColor = .lightGray
         }
         
         print("############ likedMovies :\(likedMovies)")
         print("############ movie.link! :\(movie.link!)")
         print("############ likedMovies.contains(movie.link!) :\(likedMovies.contains(movie.link!))")
-
-
 
         
         guard let title = movie.title, let userRating = movie.userRating, let director = movie.director, let actor = movie.actor else {
